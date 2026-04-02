@@ -1,0 +1,189 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f7fb;
+    color: #333;
+    min-height: 100vh;
+}
+
+.header {
+    background-color: #0d6efd;
+    color: #fff;
+    padding: 18px 24px;
+}
+
+.header h1 {
+    font-size: 22px;
+}
+
+main {
+    padding: 28px 24px;
+}
+
+.add-section {
+    max-width: 640px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 26px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.add-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+/* Các field thông thường (Họ tên, Email, Số điện thoại, Vị trí) */
+.form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.form-field label {
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.form-field input,
+.form-field select {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #d8dce4;
+    border-radius: 8px;
+    background-color: #fff;
+    outline: none;
+    font-size: 14px;
+    transition: all 0.2s;
+}
+
+.form-field input:focus,
+.form-field select:focus {
+    border-color: #0d6efd;
+    box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.12);
+}
+
+/* Gender - Giới tính */
+.gender {
+    grid-column: 1 / 3;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.gender-label {
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.gender-options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.gender-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 200px;
+    cursor: pointer;
+    padding: 4px 0;
+}
+
+.gender-item span {
+    font-weight: normal;
+    font-size: 14px;
+}
+
+.gender-item input[type="radio"] {
+    width: 18px;
+    height: 18px;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    accent-color: #0d6efd;
+}
+
+/* Nút hành động */
+.form-actions {
+    grid-column: 1 / 3;
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 8px;
+}
+
+.form-actions button {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 500;
+    transition: all 0.2s;
+}
+
+.form-actions button[type="submit"] {
+    background-color: #198754;
+    color: #fff;
+}
+
+.form-actions button[type="submit"]:hover {
+    background-color: #157347;
+}
+
+.form-actions button[type="button"] {
+    background-color: #6c757d;
+    color: #fff;
+}
+
+.form-actions button[type="button"]:hover {
+    background-color: #5a6268;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+    .add-section {
+        padding: 20px;
+    }
+    
+    .add-form {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+    
+    .gender {
+        grid-column: 1 / 2;
+    }
+    
+    .form-actions {
+        grid-column: 1 / 2;
+        justify-content: stretch;
+    }
+    
+    .form-actions button {
+        flex: 1;
+    }
+    
+    .gender-item {
+        max-width: 100%;
+    }
+}
+.error {
+    color: red;
+    font-size: 12px;
+    margin-top: 4px;
+    display: block;
+}
+
+input:invalid {
+    border-color: red;
+}

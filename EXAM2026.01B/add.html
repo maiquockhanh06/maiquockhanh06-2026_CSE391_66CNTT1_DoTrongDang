@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thêm nhân sự mới</title>
+    <link rel="stylesheet" href="css/add.css">
+</head>
+
+<body>
+    <header class="header">
+        <h1 id="page-title">Thêm hội thảo mới</h1>
+    </header>
+
+    <main>
+        <div class="add-section">
+    <form class="add-form">
+        <div class="form-field">
+            <label>Tên hội thảo</label>
+            <input type="text" placeholder="Nhập tên sự kiện">
+            <small class="error"></small>
+        </div>
+        
+        <div class="form-field">
+            <label>Diễn giả</label>
+            <input type="text" placeholder="Họ tên diễn giả">
+            <small class="error"></small>
+        </div>
+        
+        <div class="form-field">
+            <label>Email</label>
+            <input type="email" placeholder="email@example.com">
+            <small class="error"></small>
+        </div>
+        
+        <!-- <div class="form-field">
+            <label>Vị trí</label>
+            <select>
+                <option value="" disabled selected>-- Chọn vị trí --</option>
+                <option value="nhan_vien">Nhân viên</option>
+                <option value="quan_ly">Quản lý</option>
+                <option value="giam_doc">Giám đốc</option>
+            </select>
+        </div> -->
+
+        
+        <div class="gender">
+            <!-- <div class="gender-label">Giới tính</div>
+            <div class="gender-options">
+                <label class="gender-item">
+                    <span>Nam</span>
+                    <input type="radio" name="gioi_tinh" value="nam">
+                </label>
+                <label class="gender-item">
+                    <span>Nữ</span>
+                    <input type="radio" name="gioi_tinh" value="nu">
+                </label>
+            </div> -->
+            <label>Địa điểm</label>
+            <input type="text" placeholder="Hội trường / địa chỉ">
+        </div>
+        
+        <div class="form-actions">
+            
+            <button type="button" onclick="window.location.href='home.html'">Hủy</button>
+            <button type="submit">Lưu</button>
+        </div>
+    </form>
+</div>
+    </main>
+
+    <script src="js/add.js"></script>
+</body>
+
+</html>

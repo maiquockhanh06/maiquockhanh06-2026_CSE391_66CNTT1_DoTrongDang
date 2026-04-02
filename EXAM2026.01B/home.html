@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hội Thảo Hub</title>
+    <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+    <header class="header">
+        <h1>Hội Thảo Hub</h1>
+        <div class="search">
+            <input id="searchInput" class="search input" type="text" placeholder="Tìm kiếm ...">
+            <button id="searchButton" class="search button">Tìm</button>
+        </div>
+        <nav class="nav">
+            <ul>
+                <li><a href="home.html">Trang chủ</a></li>
+                <li><a href="list.html">Danh sách</a></li>
+                <li><a href="add.html">Thêm mới</a></li>
+                <li><a href="gthieu.html">Giới thiệu</a></li>
+            </ul>
+        </nav>
+        
+    </header>
+
+    <main>
+        <div>
+            <h1>Bảng điều khiển hội thảo</h1>
+            <h3>Theo dõi lịch, diễn giả và địa điểm các sự kiện</h3>
+        </div>
+        <section class="welcome-section">
+            <div>
+                <label>Lọc danh sách</label>
+                <input id="loctable" class="loc table" type="text" placeholder="Gõ để lọc bảng...">
+            </div>
+            <div>
+                <label>Địa điểm</label>
+                <input id="loctable" class="loc table" type="text" placeholder="Gõ để lọc bảng...">
+            </div>
+            <button class="add-btn" onclick="window.location.href='add.html'">+ Thêm mới</button>
+        </section>
+        <section class="employee-list">
+            <table class="employee-table">
+                <thead>
+                    <tr>
+                        <th>Tên hội thảo</th>
+                        <th>Diễn giả</th>
+                        <th>Email</th>
+                        <th>Ngày tổ chức</th>
+                        <th>Địa điểm</th>
+                    </tr>
+                </thead>
+                <tbody id="employeeTableBody"></tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <h3>Hội Thảo Hub</h3>
+        <h3>Mã sinh viên - Lớp - Thi CSE391 3-2026</h3>
+    </footer>
+
+    <script src="js/home.js"></script>
+</body>
+</html>
